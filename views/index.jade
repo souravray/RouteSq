@@ -1,0 +1,14 @@
+#page.grid.grid-10
+  .grid.grid-5
+    a(href="https://twitter.com/inuitcss", title="Follow inuit.css on Twitter")
+      img(src="/images/map.png", alt="Route Square", id="logo")
+
+  .grid.grid-6
+    h1= title
+    p Dead simple way to create 
+      and share your route map
+  
+  .grid.grid-3
+    br
+    br
+    !=partial('partials/orangeButton',{link:"/route", text:"Start routing"})
