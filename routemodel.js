@@ -14,8 +14,10 @@ var ObjectId = Schema.ObjectId;
 
 
 var RouteSchema = new Schema({
-    id		: ObjectId	
-  , paths: [ ]
+    id		: ObjectId
+  , uuid	: {type: String, index: true}
+	,	title : String
+  , paths : [ ]
 });
 
 

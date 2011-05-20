@@ -1,21 +1,41 @@
-#page.grid.grid-10
-  #map_canvas(style="width:500px;height:350px;")
-  br
-  br
-  .grid-5
-    lable location1
-    input(type="text", rel="location")
-  .grid-5
-    lable location2 
-    input(type="text", rel="location")
-  .grid-5
-    lable location3 
-    input(type="text", rel="location")
-  .grid-5.end
-    lable location4 
-    input(type="text", rel="location")
-    
+#page.grid.grid-16(style="text-aling:left") 
 
+  !=partial('partials/brandingTopMenu',{})
+
+  .grid.topmargin1.end
+    #map_canvas.grid.grid-9(style="height:350px; text-align:left")
+    h3.grid.grid-6.editable(style="text-align:left")=title
+    br
+    br
+    .grid.grid-6
+      - if(routes)
+        .grid.grid-6.top_margin1(rel="routePan") 
+          -var isStartingLocation=true   
+          - each route in routes
+            -if(isStartingLocation)
+              - isStartingLocation=false
+            -else
+              #plane.grid.grid-1.top_margin0
+            .grid.grid2.gray.rounded-corners.top_margin0=route.country;
+      - else
+        .grid.grid-4(style="text-align:left")  
+          input(type="text", rel="location", value="Add a country to your route")
+          br
+          br
+        .grid.grid-6.top_margin1(rel="routePan")
+
+    - if(routes==null)
+      #save.grid.grid-4.top_margin1.end!=partial('partials/orangeButton',{link:"", text:"Save"})
+      form(method="post", action="/route")
+        input#title(type="hidden", name="_title", value="")
+        input#data(type="hidden", name="_data", value="")
+    -else
+      .grid.grid-4.top_margin2
+        #share.grid.grid-4.top_margin0.end!=partial('partials/orangeButton',{link:"", text:"Copy & share"})
+
+  - if(routes)
+    .grid.grid-15.gray.top_margin1.rounded-corners
+      != '<div id="fb-root" class="top_margin0"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:comments href="routesquare.com/routes/'+uuid+'"  num_posts="5" width="700"></fb:comments>'
 
 
 
