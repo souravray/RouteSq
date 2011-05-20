@@ -1,14 +1,10 @@
-#page.grid.grid-10
-  .grid.grid-5
-    a(href="https://twitter.com/inuitcss", title="Follow inuit.css on Twitter")
-      img(src="/images/map.png", alt="Route Square", id="logo")
-
+#page.grid.grid-12
   .grid.grid-6
-    h1= title
-    p Dead simple way to create 
-      and share your route map
-  
-  .grid.grid-3
-    br
-    br
-    !=partial('partials/orangeButton',{link:"/route", text:"Start routing"})
+    a(href="#", title="Route Square")
+      img(src="/images/map.png", alt="Route Square", id="logo")
+    h1(style="margin:-15px 0px 0 0 !important;")= title
+    p(style="margin: 4px 0px 0 0 !important;") it's the journey that's important
+
+  .grid.grid-5
+    p(style="margin:220px 0px 0 0 !important;") Route Square is a dead simple way to create and share of your travel route.
+    .top_margin0!=partial('partials/orangeButton',{link:"/route", text:"Start routing"})

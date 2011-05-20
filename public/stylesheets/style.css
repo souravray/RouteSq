@@ -13,11 +13,71 @@ body{
 	padding-top:50px;
 	text-shadow:0 -1px 0 rgba(0,0,0,0.5), 0 1px 0 rgba(255,255,255,0.25);
 }
+
 #page{
 	margin:0 auto;
 	float:none;
 	text-align:center;
 }
+
+
+
+/*------------------------------------*\
+  CSS BOX COLOR
+\*------------------------------------*/
+.gray{
+	background: #D6D6D6;
+	color: #333333;
+	text-shadow: none;
+  padding:4px;
+}
+
+.white{
+	background: #EEEEE6;
+	color: #A6A6A0;
+	text-shadow: none;
+  padding:5px;
+  padding-top:12px;
+  font-size: 1.4em;
+}
+
+/*--------------------------------------*\
+	CSS CORNER & BOX
+\*--------------------------------------*/
+.rounded-corners {
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -khtml-border-radius: 12px;
+    border-radius: 12px;
+}
+
+.top_margin0{
+	margin-top:8px;
+}
+
+.top_margin1{
+	margin-top:20px;
+}
+
+.top_margin2{
+	margin-top:32px;
+}
+
+.top_margin3{
+	margin-top:46px;
+}
+
+.top_margin4{
+	margin-top:62px;
+}
+
+#plane{
+	background: url(/images/icons/plane.png) no-repeat;
+  width:32px;
+	height:22px;
+  padding:5px;
+}
+
 
 /*-------------------------------------*\
   CSS BUTTON
@@ -73,6 +133,7 @@ AUTO COMPLETE
 }
 
 .ac_results li {
+  background: url(/images/icons/add.png) no-repeat 99% 40%;
 	margin: 0px;
 	padding: 2px 5px;
 	cursor: default;
