@@ -1,0 +1,19 @@
+{
+  "name": "RouteSq",
+  "version": ">=0.2.0",
+  "repository": {
+		"type" : "git"
+  	, "url" : "git@github.com:souravray/RouteSq.git"
+	},
+  "directories": {
+    "lib": ""
+  },
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+    "express": "*"
+		,"mongoose": "*"
+  }
+}
+
